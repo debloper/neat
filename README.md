@@ -1,2 +1,2 @@
 # neat
-Add soda according to taste.
+An aesthetically & technically minimalistic blogger template.

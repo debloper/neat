@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' 
+  xmlns='http://www.w3.org/1999/xhtml' 
+  xmlns:b='http://www.google.com/2005/gml/b' 
+  xmlns:data='http://www.google.com/2005/gml/data' 
+  xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'/>
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+    <b:skin>
+      <![CDATA[/*
+        -----------------------------------------------
+        Blogger Template Style
+        Name:     Neat
+        Designer: Soumya Deb <debloper@gmail.com>
+        URL:      https://github.com/debloper/neat
+        -----------------------------------------------
+      */]]>
+    </b:skin>
+    <b:include data='blog' name='google-analytics'/>
+  </head>
+
+  <body>
+
+    <header>
+      <b:section class='header' id='blogHeader' showaddelement='no'>
+        <b:widget id='Header1' title='Blog Header' type='Header'>
+          <b:includable id='main'>
+            <data:blog.title/>
+            <data:blog.description/>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </header>
+
+    <article>
+      <b:section class='main' id='blogMain' showaddelement='no'>
+        <b:widget id='Blog1' title='Blog Posts' type='Blog'>
+          <b:includable id='main'>
+
+            <b:if cond='data:blog.pageType in {"archive", "index"}'>
+              <b:loop values='data:posts' var='post'>
+                <h2>
+                  <a expr:href='data:post.url' expr:title='data:post.title'>
+                    <data:post.title/>
+                  </a>
+                </h2>
+              </b:loop>
+            <b:else/>
+              <b:loop values='data:posts' var='post'>
+                <h2><data:post.title/></h2>
+                <div><data:post.timestamp/></div>
+                <div><data:post.body/></div>
+              </b:loop>
+            </b:if>
+
+          </b:includable>
+
+          <b:includable id='nextprev'/>
+          <b:includable id='backlinks'/>
+          <b:includable id='backlinkDeleteIcon'/>
+          <b:includable id='status-message'/>
+          <b:includable id='comment-form'/>
+          <b:includable id='postQuickEdit'/>
+          <b:includable id='commentDeleteIcon'/>
+          <b:includable id='feedLinks'/>
+          <b:includable id='feedLinksBody'/>
+          <b:includable id='comments'/>
+        </b:widget>
+      </b:section>
+    </article>
+
+    <footer>
+      <b:section class='footer' id='blogFooter' showaddelement='no'>
+        <b:widget id='HTML1' title='Blog Footer' type='HTML'>
+          <b:includable id='main'>
+            {} with &lt;3 by Deb
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </footer>
+
+    <b:section class='faux' id='faux'/>
+
+  </body>
+</html>
