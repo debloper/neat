@@ -10,14 +10,35 @@
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <b:skin>
-      <![CDATA[/*
-        -----------------------------------------------
-        Blogger Template Style
-        Name:     Neat
-        Designer: Soumya Deb <debloper@gmail.com>
-        URL:      https://github.com/debloper/neat
-        -----------------------------------------------
-      */]]>
+      <![CDATA[
+      /*
+      -----------------------------------------------
+      Blogger Template Style
+      Name:     Neat
+      Designer: Soumya Deb <debloper@gmail.com>
+      URL:      https://github.com/debloper/neat
+      -----------------------------------------------
+      */
+      html {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 16px;
+      }
+      body {
+      color: #666;
+      margin: auto 0;
+      background: #eee;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      text-align: center;
+      }
+      header {
+      background: #ccc;
+      border-bottom: 1px solid #aaa;
+      }
+      ]]>
     </b:skin>
     <b:include data='blog' name='google-analytics'/>
   </head>
